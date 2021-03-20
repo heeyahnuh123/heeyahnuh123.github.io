@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo"><span>V</span>inkay</a>
+      <div class="menuToggle" onclick="toggleMenu();"></div>
+      <ul class="navigation">
+        <li><a href="#banner" onclick="toggleMenu();">Home</a></li>
+        <li><a href="#designs" onclick="toggleMenu();">Designs</a></li>
+        <li><a href="#about" onclick="toggleMenu();">About</a></li>
+        <li><a href="#contact" onclick="toggleMenu();">Contact</a></li>
+      </ul>
+    </header>
+    <section class="banner" id="banner">
+      <div class="content">
+        <h2>Always Choose Good</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus
+          magni ipsam nihil. Tenetur officiis labore harum cum. Placeat veniam
+          dolor rem eveniet? Aperiam odio excepturi dolorum saepe?
+        </p>
+        <a href="#" class="btn">Our Menu</a>
+      </div>
+    </section>
+
+    <section class="designs" id="designs">
+      <div class="title">
+        <h2 class="titleText">Our <span>D</span>esigns</h2>
+        <p>100% African</p>
+      </div>
+      <div class="content">
+        <div class="card">
+          <div class="imgBx">
+            <img src="images/vinkay.jpg" alt="" />
+          </div>
+          <div class="text">
+            <h3>T-Shirt</h3>
+          </div>
+          <div class="cta">
+            <button class="cta-select">Vinkay</button>
+            <button class="cta-add">Add To Cart</button> 
+          </div>
+        </div>
+        <div class="card">
+          <div class="imgBx">
+            <img src="images/fela.jpg" alt="" />
+          </div>
+          <div class="text">
+            <h3>T-Shirt</h3>
+          </div>
+          <div class="cta">
+            <button class="cta-select">Fela</button>
+            <button class="cta-add">Add To Cart</button> 
+          </div>
+        </div>
+        <div class="card">
+          <div class="imgBx">
+            <img src="images/eyo1.jpg" alt="" />
+          </div>
+          <div class="text">
+            <h3>T-Shirt</h3>
+          </div>
+          <div class="cta">
+            <button class="cta-select">Eyo</button>
+            <button class="cta-add">Add To Cart</button> 
+          </div>
+        </div>
+        <div class="card">
+          <div class="imgBx">
+            <img src="images/scarification.jpg" alt="" />
+          </div>
+          <div class="text">
+            <h3>T-Shirt</h3>
+          </div>
+          <div class="cta">
+            <button class="cta-select">Scarification</button>
+            <button class="cta-add">Add To Cart</button> 
+          </div>
+        </div>
+        <div class="card">
+          <div class="imgBx">
+            <img src="images/felasax.jpg" alt="" />
+          </div>
+          <div class="text">
+            <h3>T-Shirt</h3>
+          </div>
+          <div class="cta">
+            <button class="cta-select">Fela with the Sax</button>
+            <button class="cta-add">Add To Cart</button> 
+          </div>
+        </div>
+        <div class="card">
+          <div class="imgBx">
+            <img src="images/ibile.jpg" alt="" />
+          </div>
+          <div class="text">
+            <h3>T-Shirt</h3>
+          </div>
+          <div class="cta">
+            <button class="cta-select">Ibile</button>
+            <button class="cta-add">Add To Cart</button> 
+          </div>
+        </div>
+      </div>
+      <div class="title">
+        <a href="#" class="btn">Our Designs</a>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="row">
+        <div class="col50">
+          <h2 class="titleText"><span>A</span>bout Us</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum
+            similique perspiciatis iure et. Molestias voluptatum dolorum non
+            error debitis harum esse exercitationem? Quibusdam impedit
+            voluptatem earum cupiditate ratione eligendi neque! <br /><br />
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae
+            beatae blanditiis ea suscipit iusto vero rem consectetur laborum,
+            possimus amet ducimus odio quisquam voluptate eius error dolor
+            itaque impedit? Distinctio?
+          </p>
+        </div>
+        <div class="col50">
+          <div class="imgBx">
+            <img src="images/logo.jpg" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="title">
+        <h2 class="titleText"><span>C</span>ontact Us</h2>
+        <p>We are all about the African heritage.</p>
+      </div>
+      <div class="contactForm">
+        <h3>Send Message</h3>
+        <div class="inputBox">
+          <input type="text" placeholder="Name">
+        </div>
+        <div class="inputBox">
+          <input type="text" placeholder="Email">
+        </div>
+        <div class="inputBox">
+          <textarea cols="30" rows="10" placeholder="Message"></textarea>
+        </div>
+        <div class="inputBox">
+          <input type="submit" value="Send">
+        </div>
+      </div>
+    </section>
+
+    <div class="copyrightText">
+      <p>Copyright 2021 <a href="#">Vinkay</a>. All Rights Reserved</p>
+    </div>
+
+    <script>
+      window.addEventListener("scroll", function () {
+        const header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 0);
+      });
+
+      function toggleMenu(){
+        const menuToggle = document.querySelector('.menuToggle');
+        const navigation = document.querySelector('.navigation');
+        menuToggle.classList.toggle('active');
+        navigation.classList.toggle('active');
+      }
+    </script>
+  </body>
+</html>
